@@ -1,0 +1,12 @@
+1:
+npm create vite@latest
+
+2:
+Give project name and chooose language, React & JS in our case.
+
+3:
+Follow the given instruction:
+cd -> npm install -> code . to open the directory in vscode
+
+4:
+npm run dev to run the code
