@@ -1,0 +1,68 @@
+console.log("Hello all")
+var a=10
+var b="Hello"
+var c=true
+console.log("a=",a,"b=",b,"c=",c)
+console.log(typeof(a),typeof(b),typeof(c))
+if(a>5){
+    var res=0   //let res=0
+    res=a+100
+    console.log("result=",res)
+}
+console.log("result outside if :",res)
+
+//calling functions
+function display(){
+console.log("Hello, this is display function")
+}
+display()
+
+function add(a,b){
+return a+b
+}
+let addedres=add(2,3)
+console.log(addedres)
+
+//arrow function/anonymous function
+const multiply=(a,b)=>a*b
+const mRes=multiply(10,90)
+console.log("Multiply res=",mRes)
+
+const divide=(a,b)=>{
+    if(b>0){
+        return a/b
+    }
+    else{
+        return 0
+    }
+}
+const dRes=divide(10,2)
+console.log(dRes)
+
+
+const minus=(a,b=5)=>a-b
+const minusRes=minus(10)
+console.log(minusRes)
+console.log(minus(10,7))
+
+
+// creating array
+const arr=[1,8,11,39]
+for(let i=0;i<arr.length;i++){
+const ele=arr[i]
+console.log("element:",ele)
+}
+
+//destructuring
+const[e,f,g]=arr
+console.log(e,f,g)
+
+//MAP
+const person={
+    name:"Shyam",
+    age:40,
+    study:"science"
+}
+//destructuring object
+const{name,age}=person
+console.log(name,age)
