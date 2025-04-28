@@ -1,0 +1,33 @@
+import {useState} from "react";
+
+function MyApp(){
+  const [count, setCount]= useState(0)
+  
+  const handleIncrement = ()=>{
+    setCount(count +1)
+    console.log("value of count :",count)
+  }
+  return(
+    <div>
+      <h1>My First React App</h1>
+      <b>Count= {count}</b>
+      <button onClick= {handleIncrement}>Increment</button>
+      <DisplayName name="Roshan"></DisplayName>
+      <DisplayNameWithDestructuring name = "Ram" age="30"> </DisplayNameWithDestructuring>
+    </div>
+  )
+}
+export default MyApp
+
+
+const DisplayNameWithDestructuring =({name,age})=>{
+  return(
+    <p>My Name is : {name} and age is :{age} </p>
+  )
+}
+const DisplayName =(name)=>{
+  console.log("name:",name)
+  return(
+    <p>My name is{name.name}</p>
+  )
+}
