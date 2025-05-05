@@ -1,0 +1,272 @@
+// import React, { useState } from 'react';
+
+// const CounterApp = () => {
+//   const [count, setCount] = useState(0);
+
+//   const increment = () => setCount(prev => prev + 1);
+//   const decrement = () => setCount(prev => prev - 1);
+//   const reset = () => setCount(0);
+
+//   return (
+//     <div >
+//       <h1 >Counter: {count}</h1>
+//       <div >
+//         <button onClick={increment}>
+//           Increment
+//         </button>
+//         <button onClick={decrement} >
+//           Decrement
+//         </button>
+//         <button onClick={reset}>
+//           Reset
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+// export default CounterApp;
+
+// import React, { useState } from 'react';
+
+// const ToggleButton = () => {
+//   const [isOn, setIsOn] = useState(false);
+
+//   const toggle = () => setIsOn(prev => !prev);
+
+//   return (
+//     <div>
+//       <button
+//         onClick={toggle} >
+//         {isOn ? 'ON' : 'OFF'}
+//       </button>
+//       <p>Status: {isOn ? 'Enabled' : 'Disabled'}</p>
+//     </div>
+//   );
+// };
+
+// export default ToggleButton;
+
+
+// import React, { useState, useEffect } from 'react';
+// import './styles.css'; // You'll define light/dark styles here
+
+// function App() {
+//   const [darkMode, setDarkMode] = useState(false);
+
+//   useEffect(() => {
+//     document.body.className = darkMode ? 'dark' : 'light';
+//   }, [darkMode]);
+
+//   return (
+//     <div className="app-container">
+//       <h1>{darkMode ? 'Dark Theme' : 'Light Theme'}</h1>
+//       <label className="switch">
+//         <input
+//           type="checkbox"
+//           checked={darkMode}
+//           onChange={() => setDarkMode(!darkMode)}
+//         />
+//         <span className="slider"></span>
+//       </label>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// import React, { useState, useEffect } from 'react';
+
+// function App() {
+//   const [color, setColor] = useState('#ffffff'); // default white
+
+//   useEffect(() => {
+//     document.body.style.backgroundColor = color;
+//   }, [color]);
+
+//   return (
+//     <div style={{ textAlign: 'center', padding: '2rem' }}>
+//       <h1>Pick a Background Color</h1>
+//       <input
+//         type="color"
+//         value={color}
+//         onChange={(e) => setColor(e.target.value)}
+//         style={{ width: '100px', height: '50px', border: 'none' }}
+//       />
+//       <p>Selected Color: {color}</p>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// import React, { useState } from 'react';
+
+// function App() {
+//   const [showImage, setShowImage] = useState(true);
+
+//   const toggleImage = () => {
+//     setShowImage(!showImage);
+//   };
+
+//   return (
+//     <div style={{ textAlign: 'center', padding: '2rem' }}>
+//       <button onClick={toggleImage}>
+//         {showImage ? 'Hide Image' : 'Show Image'}
+//       </button>
+
+//       {showImage && (
+//         <div style={{ marginTop: '20px' }}>
+//           <img
+//             src="https://imgs.search.brave.com/me8UU03kooaQonytV4deXGFdXHjG0fWbXMBzMy6LnMw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzY4Lzhi/LzY5LzY4OGI2OTRj/ZmM5NmNmMmUyNmQx/NTA2OWQ5OGZiZGM0/LmpwZw"
+//             alt="Example"
+//             style={{ width: '300px', height: 'auto' }}
+//           />
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// import React, { useState } from 'react';
+
+// function App() {
+//   const [clickCount, setClickCount] = useState(0);
+
+//   const handleClick = () => {
+//     setClickCount(prevCount => prevCount + 1);
+//   };
+
+//   return (
+//     <div style={{ textAlign: 'center', padding: '2rem' }}>
+//       <h1>Click Tracker</h1>
+//       <div
+//         onClick={handleClick}
+//         style={{
+//           width: '200px',
+//           height: '200px',
+//           backgroundColor: '#f0a500',
+//           margin: 'auto',
+//           display: 'flex',
+//           justifyContent: 'center',
+//           alignItems: 'center',
+//           fontSize: '24px',
+//           cursor: 'pointer',
+//           borderRadius: '10px',
+//         }}
+//       >
+//         Click me!
+//       </div>
+//       <p style={{ marginTop: '20px' }}>
+//         Clicked <strong>{clickCount}</strong> times
+//       </p>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// import React, { useState } from 'react';
+
+// function App() {
+//   const [visible, setVisible] = useState(false);
+//   const [password, setPassword] = useState('');
+
+//   const toggleVisibility = () => {
+//     setVisible(!visible);
+//   };
+
+//   return (
+//     <div style={{ textAlign: 'center', padding: '2rem' }}>
+//       <h2>Password Input</h2>
+//       <input
+//         type={visible ? 'text' : 'password'}
+//         value={password}
+//         onChange={(e) => setPassword(e.target.value)}
+//         placeholder="Enter password"
+//         style={{ padding: '10px', fontSize: '16px', marginRight: '10px' }}
+//       />
+//       <button onClick={toggleVisibility}>
+//         {visible ? 'Hide' : 'Show'}
+//       </button>
+//       <p style={{ marginTop: '1rem' }}>
+//         Password: {password}
+//       </p>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React, { useState } from 'react';
+
+const quotes = [
+  "The best way to get started is to quit talking and begin doing. – Walt Disney",
+  "Don't let yesterday take up too much of today. – Will Rogers",
+  "It's not whether you get knocked down, it's whether you get up. – Vince Lombardi",
+  "If you are working on something exciting, it will keep you motivated. – Steve Jobs",
+  "Success is not in what you have, but who you are. – Bo Bennett"
+];
+
+const QuoteGenerator = () => {
+  const getRandomQuote = () => quotes[Math.floor(Math.random() * quotes.length)];
+  const [quote, setQuote] = useState(getRandomQuote());
+
+  const handleNewQuote = () => {
+    setQuote(getRandomQuote());
+  };
+
+  return (
+    <div style={{ padding: '2rem', textAlign: 'center', fontFamily: 'Arial' }}>
+      <h2>Random Quote Generator</h2>
+      <p style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>{quote}</p>
+      <button onClick={handleNewQuote}>New Quote</button>
+    </div>
+  );
+};
+
+export default QuoteGenerator;
+
+
+// import React, { useState } from "react";
+
+// const TrafficLight = () => {
+//   const [light, setLight] = useState("red");
+
+//   const handleClick = () => {
+//     setLight(prev => {
+//       if (prev === "red") return "green";
+//       if (prev === "green") return "yellow";
+//       return "red";
+//     });
+//   };
+
+//   const getLightStyle = (color) => ({
+//     width: "60px",
+//     height: "60px",
+//     borderRadius: "50%",
+//     backgroundColor: color === light ? color : "gray",
+//     margin: "10px",
+//     transition: "background-color 0.3s",
+//   });
+
+//   return (
+//     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+//       <div style={getLightStyle("red")}></div>
+//       <div style={getLightStyle("yellow")}></div>
+//       <div style={getLightStyle("green")}></div>
+//       <button onClick={handleClick} style={{ marginTop: "20px", padding: "10px 20px" }}>
+//         Next Light
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default TrafficLight;
+
+
+
+
+
